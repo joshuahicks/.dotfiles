@@ -8,5 +8,13 @@ return {
 	
 	font_size = 15,
 
-    window_close_confirmation  = 'NeverPrompt',
+	window_close_confirmation  = 'NeverPrompt',
+	
+	keys = {
+		{
+        	key = 'w',
+            mods = 'CMD',
+            action = wezterm.action.CloseCurrentPane { confirm = true },
+        },
+    },
 }
