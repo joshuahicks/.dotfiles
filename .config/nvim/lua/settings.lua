@@ -29,11 +29,10 @@ vim.bo.autoindent = true
 vim.bo.smartindent = true
 vim.wo.wrap = false
 
-vim.o.foldmethod = 'manual'
-
 -- Treesitter folding 
---vim.wo.foldmethod = 'expr'
---vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.wo.foldlevel = 99
 
 vim.opt.shortmess = vim.opt.shortmess + { c = true }
 
