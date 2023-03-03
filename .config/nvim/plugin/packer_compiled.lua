@@ -74,6 +74,16 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["FixCursorHold.nvim"] = {
+    loaded = true,
+    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
+    url = "https://github.com/antoinemadec/FixCursorHold.nvim"
+  },
+  LuaSnip = {
+    loaded = true,
+    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["auto-pairs"] = {
     loaded = true,
     path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/auto-pairs",
@@ -89,11 +99,6 @@ _G.packer_plugins = {
     path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["cmp-nvim-lsp-signature-help"] = {
-    loaded = true,
-    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-signature-help",
-    url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help"
-  },
   ["cmp-nvim-lua"] = {
     loaded = true,
     path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
@@ -104,20 +109,35 @@ _G.packer_plugins = {
     path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  ["cmp-vsnip"] = {
+  cmp_luasnip = {
     loaded = true,
-    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
-    url = "https://github.com/hrsh7th/cmp-vsnip"
+    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["completion-nvim"] = {
+  ["friendly-snippets"] = {
     loaded = true,
-    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/completion-nvim",
-    url = "https://github.com/nvim-lua/completion-nvim"
+    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   gruvbox = {
     loaded = true,
     path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/gruvbox-community/gruvbox"
+  },
+  harpoon = {
+    loaded = true,
+    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/theprimeagen/harpoon"
+  },
+  ["lsp-zero.nvim"] = {
+    loaded = true,
+    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
+    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -134,25 +154,25 @@ _G.packer_plugins = {
     path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  neotest = {
+    loaded = true,
+    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/neotest",
+    url = "https://github.com/nvim-neotest/neotest"
+  },
+  ["neotest-jest"] = {
+    loaded = true,
+    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/neotest-jest",
+    url = "https://github.com/haydenmeade/neotest-jest"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-dap"] = {
-    loaded = true,
-    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/nvim-dap",
-    url = "https://github.com/mfussenegger/nvim-dap"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-lspinstall"] = {
-    loaded = true,
-    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/nvim-lspinstall",
-    url = "https://github.com/anott03/nvim-lspinstall"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -179,35 +199,35 @@ _G.packer_plugins = {
     path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["rust-tools.nvim"] = {
+  ["rest.nvim"] = {
     loaded = true,
-    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
-    url = "https://github.com/simrat39/rust-tools.nvim"
+    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/rest.nvim",
+    url = "https://github.com/rest-nvim/rest.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["todo-comments.nvim"] = {
     loaded = true,
     path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
   },
-  ["trouble.nvim"] = {
+  undotree = {
     loaded = true,
-    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/trouble.nvim",
-    url = "https://github.com/folke/trouble.nvim"
-  },
-  ["vgit.nvim"] = {
-    loaded = true,
-    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/vgit.nvim",
-    url = "https://github.com/tanvirtin/vgit.nvim"
+    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/undotree",
+    url = "https://github.com/mbbill/undotree"
   },
   ["vim-floaterm"] = {
     loaded = true,
     path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/vim-floaterm",
     url = "https://github.com/voldikss/vim-floaterm"
   },
-  ["vim-vsnip"] = {
+  ["vim-fugitive"] = {
     loaded = true,
-    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/vim-vsnip",
-    url = "https://github.com/hrsh7th/vim-vsnip"
+    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   }
 }
 

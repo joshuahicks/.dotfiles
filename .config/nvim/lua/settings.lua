@@ -4,14 +4,15 @@ vim.o.relativenumber = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
+vim.o.scrolloff = 8
 
-vim.o.cmdheight = 2
+--vim.o.cmdheight = 2
 
-vim.o.updatetime = 300
+vim.o.updatetime = 50
 vim.o.incsearch = false
 vim.wo.signcolumn = 'yes'
 
--- vim.o.termguicolors = true
+vim.o.termguicolors = true
 vim.o.syntax = 'on'
 vim.o.errorbells = false
 vim.o.smartcase = true
@@ -19,13 +20,16 @@ vim.o.showmode = false
 vim.bo.swapfile = false
 vim.o.backup = false
 
---vim.o.undodir = vim.fn.stdpath('config') .. '/undodir'
---vim.o.undofile = true
+vim.o.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.o.undofile = true
+
 vim.o.hidden = true
 vim.o.completeopt='menuone,noinsert,noselect'
 vim.bo.autoindent = true
 vim.bo.smartindent = true
 vim.wo.wrap = false
+
+vim.o.foldmethod = 'manual'
 
 -- Treesitter folding 
 --vim.wo.foldmethod = 'expr'
@@ -33,7 +37,10 @@ vim.wo.wrap = false
 
 vim.opt.shortmess = vim.opt.shortmess + { c = true }
 
+--vim.o.colorcolumn = "80"
+
 vim.cmd([[
 set signcolumn=yes
 autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
+

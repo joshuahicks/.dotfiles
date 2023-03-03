@@ -5,6 +5,8 @@ export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH=$PATH:$(go env GOPATH)/bin
+export GOPATH=$(go env GOPATH)
 
 # Theme
 ZSH_THEME="robbyrussell"
