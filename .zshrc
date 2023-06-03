@@ -23,7 +23,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git docker docker-compose zsh-autosuggestions)
+plugins=(git gh docker-compose zsh-autosuggestions zsh-syntax-highlighting)
 
 # Aliases
 alias python=/usr/bin/python3
