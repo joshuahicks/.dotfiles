@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# add apps to $PATH
+# Add apps to $PATH
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
@@ -11,10 +11,8 @@ export GOPATH=$(go env GOPATH)
 # Theme
 ZSH_THEME="robbyrussell"
 
-# Node Version Manager
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Fast Node Manager
+eval "$(fnm env --use-on-cd)"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -23,7 +21,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git gh docker-compose zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git docker-compose zsh-autosuggestions zsh-syntax-highlighting)
 
 # Aliases
 alias python=/usr/bin/python3
