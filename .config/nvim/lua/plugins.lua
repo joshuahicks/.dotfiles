@@ -11,7 +11,7 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    -- keyword colours
+    -- syntax highlighting
     use('nvim-treesitter/nvim-treesitter', {
         run = ':TSUpdate'
     })
