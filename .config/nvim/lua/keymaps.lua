@@ -27,10 +27,8 @@ map("n", "<C-u>", "<C-u>zz")
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
--- greatest remap ever
 map("x", "<leader>p", [["_dP]])
 
--- next greatest remap ever : asbjornHaland
 map("n", "<leader>y", [["+y]])
 map("v", "<leader>y", [["+y]])
 map("n", "<leader>Y", [["+Y]])
