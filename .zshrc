@@ -27,7 +27,7 @@ plugins=(git docker-compose zsh-autosuggestions zsh-syntax-highlighting)
 alias python=/usr/bin/python3
 alias dc='docker-compose'
 alias wdc='watch docker-compose'
-alias vim='nvim'
+alias vim='nvim .'
 alias brewup='brew update && brew upgrade'
 
 # Config Aliases
