@@ -9,14 +9,32 @@ local map = function(mode, key, results)
     )
 end
 
+function WinMove(key)
+    local curwin = vim.api.nvim_get_current_win()
+    vim.cmd("wincmd " .. key)
+    if curwin == vim.api.nvim_get_current_win() then
+        if string.match(key, "[jk]") then
+            vim.cmd("wincmd s")
+        else
+            vim.cmd("wincmd v")
+        end
+        vim.cmd("wincmd " .. key)
+    end
+end
+
 -- netrw
 map('n', '<leader>pv', '<Cmd>Ex<CR>')
 
 -- pane navigation
-map("n", "<C-h>", "<C-w>h")
-map("n", "<C-j>", "<C-w>j")
-map("n", "<C-k>", "<C-w>k")
-map("n", "<C-l>", "<C-w>l")
+map('n', '<C-h>', ':lua WinMove("h")<CR>')
+map('n', '<C-j>', ':lua WinMove("j")<CR>')
+map('n', '<C-k>', ':lua WinMove("k")<CR>')
+map('n', '<C-l>', ':lua WinMove("l")<CR>')
+
+-- tabs
+map('n', '<C-t>', '<Cmd>tabe<CR>')
+map('n', '<C-n>', '<Cmd>tabn<CR>')
+map('n', '<C-x>', '<Cmd>tabc<CR>')
 
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
@@ -38,8 +56,6 @@ map("v", "<leader>d", [["_d]])
 
 map("n", "Q", "<nop>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
-
-map("n", "<leader><leader>", '<Cmd>so<CR>')
 
 -- nvim rest
 map("n", "<leader>r", "<Plug>RestNvim")
