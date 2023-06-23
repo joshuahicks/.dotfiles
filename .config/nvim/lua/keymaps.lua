@@ -24,6 +24,7 @@ end
 
 -- netrw
 map('n', '<leader>pv', '<Cmd>Ex<CR>')
+map('n', '<leader><leader><leader><leader><leader><leader>l', '<Plug>NetrwRefresh')
 
 -- pane navigation
 map('n', '<C-h>', ':lua WinMove("h")<CR>')
