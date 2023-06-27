@@ -23,7 +23,6 @@ return require('packer').startup(function(use)
     }
 
     -- Quality of life
-    use('tpope/vim-fugitive')
     use('nvim-tree/nvim-web-devicons')
     use('nvim-lualine/lualine.nvim')
     use('lewis6991/gitsigns.nvim')
