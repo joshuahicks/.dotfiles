@@ -23,7 +23,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(git docker-compose zsh-autosuggestions zsh-syntax-highlighting)
 
 # Aliases
-alias python=/usr/bin/python3
 alias dc='docker-compose'
 alias wdc='watch docker-compose'
 alias vim='nvim .'
