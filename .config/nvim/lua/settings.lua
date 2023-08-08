@@ -2,6 +2,7 @@ vim.o.number = true
 vim.o.relativenumber = true
 
 vim.g.netrw_keepdir = 0
+vim.g.netrw_banner = 0
 
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
@@ -9,7 +10,7 @@ vim.o.expandtab = true
 vim.o.scrolloff = 8
 
 vim.o.updatetime = 50
-vim.o.incsearch = false
+vim.o.incsearch = true
 vim.wo.signcolumn = 'yes'
 
 vim.o.syntax = 'on'
