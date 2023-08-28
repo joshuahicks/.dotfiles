@@ -60,4 +60,3 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- nvim rest
 map("n", "<leader>r", "<Plug>RestNvim")
-
