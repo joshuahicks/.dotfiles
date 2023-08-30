@@ -37,6 +37,9 @@ map('n', '<C-t>', '<Cmd>tabe<CR>')
 map('n', '<C-n>', '<Cmd>tabn<CR>')
 map('n', '<C-x>', '<Cmd>tabc<CR>')
 
+-- code actions
+map('n', '<leader>ca', ':lua vim.lsp.buf.code_action()<CR>')
+
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
 
