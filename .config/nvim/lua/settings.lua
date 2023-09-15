@@ -12,8 +12,10 @@ vim.o.expandtab = true
 vim.o.scrolloff = 8
 
 vim.o.updatetime = 50
-vim.o.incsearch = true
 vim.wo.signcolumn = 'yes'
+
+vim.o.incsearch = true
+vim.o.hlsearch = false
 
 vim.o.syntax = 'on'
 vim.o.errorbells = false

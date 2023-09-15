@@ -100,6 +100,11 @@ _G.packer_plugins = {
     path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["fairyfloss.vim"] = {
+    loaded = true,
+    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/fairyfloss.vim",
+    url = "https://github.com/tssm/fairyfloss.vim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -109,11 +114,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
-  },
-  ["gruvbox.nvim"] = {
-    loaded = true,
-    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
   ["lexima.vim"] = {
     loaded = true,
@@ -144,6 +144,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/Users/joshua/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

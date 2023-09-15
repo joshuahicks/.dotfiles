@@ -3,7 +3,7 @@ require('telescope').setup{
         find_files = {
             hidden = true,
         }
-    },
+    }
 }
 
 local builtin = require('telescope.builtin')
