@@ -4,7 +4,6 @@ return require('packer').startup(function(use)
 
     -- colour scheme
     -- use 'ellisonleao/gruvbox.nvim'
-    -- use({ 'rose-pine/neovim', as = 'rose-pine' })
     use 'tssm/fairyfloss.vim'
 
     -- file fuzzy finding
@@ -24,14 +23,7 @@ return require('packer').startup(function(use)
         requires = { "nvim-lua/plenary.nvim" }
     }
 
-    -- db client
-    -- use 'tpope/vim-dadbod'
-    -- use 'kristijanhusak/vim-dadbod-ui'
-    -- use 'kristijanhusak/vim-dadbod-completion'
-
     -- Quality of life
-    use('nvim-tree/nvim-web-devicons')
-    use('nvim-lualine/lualine.nvim')
     use('lewis6991/gitsigns.nvim')
     use('cohama/lexima.vim')
     use('norcalli/nvim-colorizer.lua')
