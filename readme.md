@@ -1,3 +1,10 @@
-I no longer use Github for personal projects. I moved my .dotfiles over to a repository on Codeberg, my new preferred git hosting service.
+Just a place to store some of my dot files
 
-Please see [here](https://codeberg.org/joshuahicks/.dotfiles) for my .dotfiles.
+These should be copied to your `$HOME` directory
+
+## Some tools I use regularly for development:
+- [wezterm](https://wezfurlong.org/wezterm/) - terminal emulator
+- [zsh](https://zsh.sourceforge.io/) - shell executable
+- [neovim](https://neovim.io/) - text editor
+- [rest.nvim](https://github.com/rest-nvim/rest.nvim) - rest client
+
