@@ -24,11 +24,12 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git docker-compose zsh-autosuggestions zsh-syntax-highlighting z)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting z)
 
 # Aliases
 alias dc='docker-compose'
-alias dps='docker ps'
+alias dcps='docker-compose ps --format "table {{.Name}}\t{{.Status}}\t{{.Ports}}"'
+alias dockprune='docker images prune && docker volume prune'
 alias wdc='watch docker-compose'
 alias pm='pm2'
 alias vim='nvim .'
