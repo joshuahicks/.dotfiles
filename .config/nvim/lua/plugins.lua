@@ -5,7 +5,7 @@ return require('packer').startup(function(use)
     -- colour scheme
     use 'sainnhe/gruvbox-material'
 
-    -- file fuzzy finding
+    -- fuzzy file finding
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
         requires = { { 'nvim-lua/plenary.nvim' } }
