@@ -31,9 +31,11 @@ alias dc='docker-compose'
 alias dcps='docker-compose ps --format "table {{.Name}}\t{{.Status}}\t{{.Ports}}"'
 alias dockprune='docker images prune && docker volume prune'
 alias wdc='watch docker-compose'
+
 alias pm='pm2'
 alias vim='nvim .'
 alias brewup='brew update && brew upgrade'
+alias py='python3'
 
 # Config Aliases
 alias vimconf='nvim ~/.config/nvim/init.lua'
@@ -46,5 +48,21 @@ alias zshconf='nvim ~/.zshrc'
 # Directory Aliases
 alias notes='cd ~/work/notes'
 alias home='cd ~'
+
+# Function to change guthub directories using fzf
+github_cd() {
+    cd "$(find ~/work ~/personal -path '*/github/*' -prune -type d -maxdepth 2 | sed 's|.*/github/\([^/]*\)/.*|\1|' | fzf -e)" && zle -I
+}
+zle -N github_cd
+bindkey '^P' github_cd
+
+# Mainly used to go back into vim
+foreground() {
+    fg
+}
+zle -N foreground
+bindkey '^E' foreground
+
+# source $HOME/.config/zsh/set_tab_title.zsh
 
 source $ZSH/oh-my-zsh.sh
