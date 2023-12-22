@@ -38,7 +38,7 @@ map('n', '<C-n>', '<Cmd>tabn<CR>')
 map('n', '<C-x>', '<Cmd>tabc<CR>')
 map('n', '<C-]>', '<C-w><C-]><C-w>T')
 for i = 1, 9 do
-    map('n', '<C-' .. i .. '>', '<Cmd>tabnext ' .. i .. '<CR>')
+    map('n', '<leader>' .. i, '<Cmd>tabnext ' .. i .. '<CR>')
 end
 
 -- lsp diagnostic enable/disable
