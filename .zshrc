@@ -39,10 +39,12 @@ alias py='python3'
 
 # Config Aliases
 alias vimconf='nvim ~/.config/nvim/init.lua'
-alias vimset='nvim ~/.config/nvim/lua/settings.lua'
-alias vimplug='nvim ~/.config/nvim/lua/plugins.lua'
-alias vimkeys='nvim ~/.config/nvim/lua/keymaps.lua'
+alias vimset='nvim ~/.config/nvim/lua/joshua/settings.lua'
+alias vimplug='nvim ~/.config/nvim/lua/joshua/plugins.lua'
+alias vimkeys='nvim ~/.config/nvim/lua/joshua/keymaps.lua'
 alias wezconf='nvim ~/.config/wezterm/wezterm.lua'
+alias yabaiconf='nvim ~/.config/yabai/yabairc'
+alias skhdconf='nvim ~/.config/skhd/skhdrc'
 alias zshconf='nvim ~/.zshrc'
 
 # Directory Aliases
