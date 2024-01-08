@@ -20,6 +20,17 @@ function WinMove(key)
         end
         vim.cmd("wincmd " .. key)
     end
+
+    -- Check if the current directory is a Git repository
+    local is_git_repo = vim.fn.system("git rev-parse --is-inside-work-tree >/dev/null 2>&1")
+    if is_git_repo == 0 then
+        -- Find the project root directory using git
+        local git_root = vim.fn.systemlist("git rev-parse --show-toplevel")
+        if #git_root > 0 then
+            -- Set the working directory to the project root
+            vim.cmd("lcd " .. git_root[1])
+        end
+    end
 end
 
 -- netrw
@@ -78,4 +89,5 @@ function ExecuteCurrentPythonFile()
     local command = "!python3 " .. file_name
     vim.api.nvim_command(command)
 end
+
 map("n", "<leader>ef", ":lua ExecuteCurrentPythonFile()<CR>")

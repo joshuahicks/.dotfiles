@@ -1,11 +1,13 @@
 vim.o.guicursor = ""
 
-vim.o.number = true
-vim.o.relativenumber = true
-
 vim.g.netrw_keepdir = 0
 vim.g.netrw_banner = 0
 vim.o.statusline = '%f'
+
+vim.o.termguicolors = true
+
+vim.o.number = true
+vim.o.relativenumber = true
 
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
@@ -26,10 +28,12 @@ vim.bo.swapfile = false
 vim.o.backup = false
 
 vim.o.hidden = true
-vim.o.completeopt = 'menuone,noinsert,noselect'
+vim.opt.completeopt = 'menuone,noinsert,noselect'
 vim.bo.autoindent = true
 vim.bo.smartindent = true
 vim.wo.wrap = false
+
+vim.o.virtualedit = 'block'
 
 vim.opt.shortmess = vim.opt.shortmess + { c = true }
 
@@ -37,15 +41,3 @@ vim.cmd([[
 set signcolumn=yes
 autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
-
--- make zsh files recognized as sh for bash-ls & treesitter
-vim.filetype.add {
-	extension = {
-		zsh = "sh",
-		sh = "sh", -- force sh-files with zsh-shebang to still get sh as filetype
-	},
-	filename = {
-		[".zshrc"] = "sh",
-		[".zshenv"] = "sh",
-	},
-}

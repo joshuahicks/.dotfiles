@@ -1,6 +1,5 @@
 vim.g.mapleader = " "
 
-require('settings')
-require('plugins')
-require('keymaps')
-require('colourscheme')
+require("joshua.settings")
+require("joshua.keymaps")
+require("joshua.plugins")
