@@ -8,11 +8,11 @@ end
 
 config.color_scheme = 'Gruvbox Material (Gogh)'
 config.window_decorations = "RESIZE"
+config.window_background_opacity = 0.965
 config.enable_tab_bar = false
 config.initial_rows = 40
 config.initial_cols = 175
 config.font_size = 14
-config.window_close_confirmation = 'NeverPrompt'
 config.colors = {
     cursor_fg = 'black',
 }
