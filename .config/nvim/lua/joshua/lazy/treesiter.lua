@@ -3,11 +3,6 @@ return {
     build = ":TSUpdate",
 
     config = function()
-        -- This is needed to support folding
-        vim.wo.foldmethod = 'expr'
-        vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
-        vim.wo.foldlevel = 99
-
         require("nvim-treesitter.configs").setup({
             ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
             sync_install = false,
