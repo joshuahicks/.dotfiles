@@ -49,15 +49,4 @@ config.keys = {
     },
 }
 
--- config.window_frame = {
---     border_left_width = '0.4cell',
---     border_right_width = '0.4cell',
---     border_bottom_height = '0.20cell',
---     border_top_height = '0.20cell',
---     border_left_color = '#a9b665',
---     border_right_color = '#a9b665',
---     border_bottom_color = '#a9b665',
---     border_top_color = '#a9b665',
--- }
-
 return config
