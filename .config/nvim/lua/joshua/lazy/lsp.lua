@@ -46,9 +46,14 @@ return {
 				end
 			end,
 		})
+		require("mason").setup()
 
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+
+		local mason_registry = require("mason-registry")
+		local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
+			.. "/node_modules/@vue/language-server"
 
 		local servers = {
 			gopls = {
@@ -62,34 +67,27 @@ return {
 				filetypes = {
 					"javascript",
 					"typescript",
+					"javascriptreact",
+					"typescriptreact",
 					"vue",
 				},
 				init_options = {
 					plugins = {
 						{
 							name = "@vue/typescript-plugin",
-							location = require("utils.getpath").get_npm_global_path() .. "/@vue/typescript-plugin",
-							languages = {
-								"javascript",
-								"typescript",
-								"vue",
-							},
+							location = vue_language_server_path,
+							languages = { "vue" },
 						},
 					},
 				},
 			},
 			volar = {},
 			lua_ls = {
-				-- cmd = {...},
-				-- filetypes { ...},
-				-- capabilities = {},
 				settings = {
 					Lua = {
 						runtime = { version = "LuaJIT" },
 						workspace = {
 							checkThirdParty = false,
-							-- Tells lua_ls where to find all the Lua files that you have loaded
-							-- for your neovim configuration.
 							library = {
 								"${3rd}/luv/library",
 								unpack(vim.api.nvim_get_runtime_file("", true)),
@@ -98,14 +96,10 @@ return {
 						completion = {
 							callSnippet = "Replace",
 						},
-						-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-						-- diagnostics = { disable = { 'missing-fields' } },
 					},
 				},
 			},
 		}
-
-		require("mason").setup()
 
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
