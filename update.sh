@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 SOURCE_DIR="$(dirname "$0")"
 DEST_DIR="$HOME"
