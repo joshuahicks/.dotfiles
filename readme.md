@@ -1,6 +1,6 @@
 Just a place to store some of my dot files
 
-These should be copied to your `$HOME` directory
+Clone this repo, then run `./update.sh` to copy these to your `$HOME` directory
 
 ## Some tools I use regularly for development:
 - [wezterm](https://wezfurlong.org/wezterm/) - terminal emulator
