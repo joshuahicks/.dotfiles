@@ -23,8 +23,6 @@ eval "$(direnv hook zsh)"
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 # Aliases
@@ -37,16 +35,6 @@ alias pm='pm2'
 alias vim='nvim .'
 alias brewup='brew update && brew upgrade'
 alias py='python3'
-
-# Config Aliases
-alias vimconf='nvim ~/.config/nvim/init.lua'
-alias vimset='nvim ~/.config/nvim/lua/joshua/settings.lua'
-alias vimplug='nvim ~/.config/nvim/lua/joshua/plugins.lua'
-alias vimkeys='nvim ~/.config/nvim/lua/joshua/keymaps.lua'
-alias wezconf='nvim ~/.config/wezterm/wezterm.lua'
-alias yabaiconf='nvim ~/.config/yabai/yabairc'
-alias skhdconf='nvim ~/.config/skhd/skhdrc'
-alias zshconf='nvim ~/.zshrc'
 
 # Directory Aliases
 alias notes='cd ~/work/notes'
@@ -65,7 +53,5 @@ foreground() {
 }
 zle -N foreground
 bindkey '^E' foreground
-
-# source $HOME/.config/zsh/set_tab_title.zsh
 
 source $ZSH/oh-my-zsh.sh
