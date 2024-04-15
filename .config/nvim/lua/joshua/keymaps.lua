@@ -40,7 +40,7 @@ map("n", "<C-l>", ':lua WinMove("l")<CR>')
 
 -- tabs
 map("n", "<C-t>", "<Cmd>tabe<CR>")
-map("n", "<C-n>", "<Cmd>tabn<CR>")
+-- map("n", "<C-n>", "<Cmd>tabn<CR>")
 map("n", "<C-x>", "<Cmd>tabc<CR>")
 map("n", "<C-]>", "<C-w><C-]><C-w>T")
 for i = 1, 9 do
@@ -76,8 +76,8 @@ map("n", "Q", "<nop>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- reference list navigation
--- map("n", "<C-n>", "<cmd>cnext<CR>zz")
--- map("n", "<C-b>", "<cmd>cprev<CR>zz")
+map("n", "<C-n>", "<cmd>cnext<CR>zz")
+map("n", "<C-b>", "<cmd>cprev<CR>zz")
 -- map("n", "<leader>k", "<cmd>lnext<CR>zz")
 -- map("n", "<leader>j", "<cmd>lprev<CR>zz")
 
