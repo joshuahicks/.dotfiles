@@ -19,7 +19,6 @@ vim.wo.signcolumn = "yes"
 
 vim.o.incsearch = true
 vim.o.hlsearch = true
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 vim.o.syntax = "on"
 vim.o.errorbells = false

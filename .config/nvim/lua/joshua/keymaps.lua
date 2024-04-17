@@ -32,6 +32,8 @@ end
 map("n", "<leader>pv", "<Cmd>Ex<CR>")
 map("n", "<leader><leader><leader><leader><leader><leader>l", "<Plug>NetrwRefresh")
 
+map("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
 -- pane navigation
 map("n", "<C-h>", ':lua WinMove("h")<CR>')
 map("n", "<C-j>", ':lua WinMove("j")<CR>')
