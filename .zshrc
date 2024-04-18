@@ -30,7 +30,6 @@ alias dc='docker-compose'
 alias dcps='docker-compose ps --format "table {{.Name}}\t{{.Status}}\t{{.Ports}}"'
 alias dockprune='docker images prune && docker volume prune'
 alias wdc='watch docker-compose'
-alias gs='git switch'
 
 alias pm='pm2'
 alias vim='nvim .'
