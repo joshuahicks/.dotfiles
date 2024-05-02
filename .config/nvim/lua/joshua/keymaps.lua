@@ -49,10 +49,6 @@ for i = 1, 9 do
 	map("n", "<leader>" .. i, "<Cmd>tabnext " .. i .. "<CR>")
 end
 
--- lsp diagnostic enable/disable
-map("n", "<leader>dh", ":lua vim.diagnostic.disable()<CR>")
-map("n", "<leader>ds", ":lua vim.diagnostic.enable()<CR>")
-
 -- code actions
 map("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>")
 
