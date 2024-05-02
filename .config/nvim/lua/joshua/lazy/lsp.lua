@@ -61,13 +61,6 @@ return {
 			},
 			ruff_lsp = {},
 			tsserver = {
-				filetypes = {
-					"javascript",
-					"typescript",
-					"javascriptreact",
-					"typescriptreact",
-					"vue",
-				},
 				init_options = {
 					plugins = {
 						{
@@ -78,7 +71,13 @@ return {
 					},
 				},
 			},
-			volar = {},
+			volar = {
+				init_options = {
+					vue = {
+						hybridMode = false,
+					},
+				},
+			},
 			lua_ls = {
 				settings = {
 					Lua = {
