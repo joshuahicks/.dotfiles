@@ -25,6 +25,7 @@ vim.o.errorbells = false
 vim.o.smartcase = true
 vim.o.showmode = false
 vim.bo.swapfile = false
+vim.o.swapfile = false
 vim.o.backup = false
 
 vim.o.hidden = true
