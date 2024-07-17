@@ -17,7 +17,7 @@ return {
 				end
 
 				map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
-				map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
+				map("gr", vim.lsp.buf.references, "[G]oto [R]eferences")
 				map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
 				map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
 				map("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
@@ -32,7 +32,6 @@ return {
 
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
-
 		local mason_registry = require("mason-registry")
 		local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
 			.. "/node_modules/@vue/language-server"
@@ -94,6 +93,11 @@ return {
 						},
 					},
 				},
+			},
+			zls = {
+				on_attach = function(client)
+					client.server_capabilities.semanticTokensProvider = nil
+				end,
 			},
 		}
 
