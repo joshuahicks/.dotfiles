@@ -5,6 +5,7 @@ return {
 	config = function()
 		require("nvim-treesitter.configs").setup({
 			ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
+			ignore_install = {},
 			sync_install = false,
 			auto_install = true,
 			autotag = {
@@ -18,7 +19,6 @@ return {
 				-- Instead of true it can also be a list of languages
 				additional_vim_regex_highlighting = { "markdown" },
 			},
-
 			indent = {
 				enabled = true,
 			},
