@@ -7,7 +7,7 @@ function spaces.getSpaceIdByName(spaceName)
 	local spaceNames = hs.spaces.missionControlSpaceNames()
 	for uuid, desktops in pairs(spaceNames) do
 		for index, name in pairs(desktops) do
-			if name == spaceName then
+			if string.find(name, spaceName) then
 				log.i("Found spaceId for " .. spaceName .. ": " .. index)
 				return index
 			end

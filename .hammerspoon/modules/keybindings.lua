@@ -5,7 +5,7 @@ local keybindings = {}
 function keybindings.bindKeys(spaces, windows)
 	-- Bind keys to move windows to different spaces
 	for i = 1, 5 do
-		hs.hotkey.bind({ "cmd", "shift" }, tostring(i), function()
+		hs.hotkey.bind({ "alt", "shift" }, tostring(i), function()
 			log.i("Hotkey pressed: alt + shift + " .. i)
 			spaces.moveFocusedWindowToSpace(i)
 		end)
