@@ -6,5 +6,7 @@ Clone this repo, then run `./update.sh` to copy these to your `$HOME` directory
 - [wezterm](https://wezfurlong.org/wezterm/) - terminal emulator
 - [zsh](https://zsh.sourceforge.io/) - shell executable
 - [neovim](https://neovim.io/) - text editor
-- [rest.nvim](https://github.com/rest-nvim/rest.nvim) - rest client
+- [httpie](https://httpie.io/) - rest client
+- [rectangle](https://rectangleapp.com/) - macos window manager
+- [hammerspoon](https://www.hammerspoon.org/) - macos configuration
 
