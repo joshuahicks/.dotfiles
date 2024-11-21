@@ -30,10 +30,10 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 # Aliases
-alias dc='docker-compose'
-alias dcps='docker-compose ps --format "table {{.Name}}\t{{.Status}}\t{{.Ports}}"'
+alias dc='docker compose'
+alias dcps='docker compose ps --format "table {{.Name}}\t{{.Status}}\t{{.Ports}}"'
 alias dockprune='docker images prune && docker volume prune'
-alias wdc='watch docker-compose'
+alias wdc='watch docker compose'
 
 alias pm='pm2'
 alias vim='nvim .'
