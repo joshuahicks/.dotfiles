@@ -6,7 +6,7 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.color_scheme = "Nord (Gogh)"
+config.color_scheme = "nordfox"
 config.font = wezterm.font("JetBrains Mono")
 config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
