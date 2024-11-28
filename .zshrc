@@ -11,10 +11,10 @@ export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-    --color=fg:#e5e9f0,bg:#2e3440,hl:#81a1c1
-    --color=fg+:#e5e9f0,bg+:#1d1d2b,hl+:#81a1c1
-    --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
-    --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
+    --color=fg:#ebdbb2,bg:#282828,hl:#b16286
+    --color=fg+:#689d6a,bg+:#32302f,hl+:#d3869b
+    --color=info:#d65d0e,prompt:#458588,pointer:#fe8019
+    --color=marker:#8ec07c,spinner:#cc241d,header:#fabd2f'
 
 # Theme
 ZSH_THEME="robbyrussell"
