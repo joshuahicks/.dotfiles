@@ -8,5 +8,4 @@ Clone this repo, then run `./update.sh` to copy these to your `$HOME` directory
 - [neovim](https://neovim.io/) - text editor
 - [httpie](https://httpie.io/) - rest client
 - [rectangle](https://rectangleapp.com/) - macos window manager
-- [hammerspoon](https://www.hammerspoon.org/) - macos configuration
 
