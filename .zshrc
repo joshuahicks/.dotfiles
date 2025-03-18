@@ -4,11 +4,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # Add apps to $PATH
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/Cellar/llvm/17.0.6_1/bin:$PATH"
-export PATH="$HOME/.zig/zig-stable/:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
-export PATH=$PATH:$(go env GOPATH)/bin
-
-export GOPATH=$(go env GOPATH)
+export PATH="$HOME/.rd/bin:$PATH"
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
     --color=fg:#ebdbb2,bg:#282828,hl:#b16286
