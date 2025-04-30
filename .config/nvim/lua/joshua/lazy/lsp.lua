@@ -37,13 +37,6 @@ return {
 			.. "/node_modules/@vue/language-server"
 
 		local servers = {
-			gopls = {
-				settings = {
-					gopls = {
-						gofumpt = true,
-					},
-				},
-			},
 			pyright = {
 				settings = {
 					pyright = {
@@ -58,6 +51,13 @@ return {
 					},
 				},
 			},
+			volar = {
+				init_options = {
+					vue = {
+						hybridMode = false,
+					},
+				},
+			},
 			ts_ls = {
 				init_options = {
 					plugins = {
@@ -66,13 +66,6 @@ return {
 							location = vue_language_server_path,
 							languages = { "vue" },
 						},
-					},
-				},
-			},
-			volar = {
-				init_options = {
-					vue = {
-						hybridMode = false,
 					},
 				},
 			},
