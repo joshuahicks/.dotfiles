@@ -76,8 +76,6 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 -- reference list navigation
 map("n", "<C-n>", "<cmd>cnext<CR>zz")
 map("n", "<C-b>", "<cmd>cprev<CR>zz")
--- map("n", "<leader>k", "<cmd>lnext<CR>zz")
--- map("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- nvim rest
 map("n", "<leader>r", "<Plug>RestNvim")

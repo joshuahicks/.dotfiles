@@ -6,6 +6,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/Cellar/llvm/17.0.6_1/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$HOME/.rd/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
     --color=fg:#ebdbb2,bg:#282828,hl:#b16286
@@ -15,9 +16,6 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 # Theme
 ZSH_THEME="robbyrussell"
-
-# Fast Node Manager
-eval "$(fnm env --use-on-cd)"
 
 # Direnv (used for python virtual envs)
 eval "$(direnv hook zsh)"
