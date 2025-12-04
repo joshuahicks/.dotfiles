@@ -6,6 +6,6 @@ Clone this repo, then run `./update.sh` to copy these to your `$HOME` directory
 - [wezterm](https://wezfurlong.org/wezterm/) - terminal emulator
 - [zsh](https://zsh.sourceforge.io/) - shell executable
 - [neovim](https://neovim.io/) - text editor
-- [httpie](https://httpie.io/) - rest client
+- [bruno](https://www.usebruno.com/) - rest client
 - [rectangle](https://rectangleapp.com/) - macos window manager
 
