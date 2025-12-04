@@ -1,8 +1,14 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Add apps to $PATH
+# Add apps to $PATH (must be before fnm)
 export PATH="/opt/homebrew/bin:$PATH"
+
+# Initialize fnm
+if command -v fnm >/dev/null 2>&1; then
+  eval "$(fnm env --use-on-cd --shell zsh)"
+fi
+
 export PATH="/opt/homebrew/Cellar/llvm/17.0.6_1/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$HOME/.rd/bin:$PATH"
@@ -54,3 +60,7 @@ zle -N foreground
 bindkey '^E' foreground
 
 source $ZSH/oh-my-zsh.sh
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/joshua/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

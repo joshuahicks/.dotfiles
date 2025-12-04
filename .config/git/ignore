@@ -6,3 +6,8 @@
 
 # sandbox endpoint file
 sandbox.py
+
+# claude stuff
+CLAUDE.md
+.claude/
+claude-info/
