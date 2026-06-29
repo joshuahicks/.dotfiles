@@ -23,9 +23,52 @@ config.keys = {
 		action = wezterm.action.CloseCurrentPane({ confirm = true }),
 	},
 	{
+		key = "d",
+		mods = "CMD",
+		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "d",
+		mods = "CMD|SHIFT",
+		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "k",
+		mods = "CMD|SHIFT",
+		action = wezterm.action.ClearScrollback("ScrollbackAndViewport"),
+	},
+	{
+		key = "h",
+		mods = "CMD",
+		action = wezterm.action.ActivatePaneDirection("Left"),
+	},
+	{
+		key = "j",
+		mods = "CMD",
+		action = wezterm.action.ActivatePaneDirection("Down"),
+	},
+	{
 		key = "k",
 		mods = "CMD",
-		action = wezterm.action.ClearScrollback("ScrollbackAndViewport"),
+		action = wezterm.action.ActivatePaneDirection("Up"),
+	},
+	{
+		key = "l",
+		mods = "CMD",
+		action = wezterm.action.ActivatePaneDirection("Right"),
+	},
+	{
+		key = "r",
+		mods = "CMD",
+		action = wezterm.action.ActivateKeyTable({
+			name = "resize_pane",
+			one_shot = false,
+		}),
+	},
+	{
+		key = "/",
+		mods = "CMD",
+		action = wezterm.action.ActivateCopyMode,
 	},
 	{
 		key = "a",
@@ -46,6 +89,18 @@ config.keys = {
 				end
 			end),
 		}),
+	},
+}
+
+config.key_tables = {
+	resize_pane = {
+		{ key = "h", action = wezterm.action.AdjustPaneSize({ "Left", 3 }) },
+		{ key = "j", action = wezterm.action.AdjustPaneSize({ "Down", 3 }) },
+		{ key = "k", action = wezterm.action.AdjustPaneSize({ "Up", 3 }) },
+		{ key = "l", action = wezterm.action.AdjustPaneSize({ "Right", 3 }) },
+		-- exit resize mode
+		{ key = "Escape", action = "PopKeyTable" },
+		{ key = "Enter", action = "PopKeyTable" },
 	},
 }
 
