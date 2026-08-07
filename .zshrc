@@ -24,7 +24,9 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 ZSH_THEME="robbyrussell"
 
 # Direnv (used for python virtual envs)
-eval "$(direnv hook zsh)"
+if command -v direnv >/dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
