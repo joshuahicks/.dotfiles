@@ -11,3 +11,4 @@ sandbox.py
 CLAUDE.md
 .claude/
 claude-info/
+.agents/settings.local.json

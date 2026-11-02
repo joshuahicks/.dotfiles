@@ -34,7 +34,16 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 # Aliases
 alias dc='docker-compose'
-alias dcps='docker-compose ps --format "table {{.Name}}\t{{.Status}}\t{{.Ports}}"'
+# Like `docker compose ps`, but resolves the project that owns this directory's compose
+# file (via `docker compose ls`), so it works when the project name isn't the folder name.
+unalias dcps 2>/dev/null  # so re-sourcing works in shells that still have the old alias
+dcps() {
+  local proj; local -a pargs
+  proj=$(docker compose ls -a --format json 2>/dev/null \
+    | jq -r --arg d "$(pwd -P)/" '.[] | select(.ConfigFiles | startswith($d)) | .Name' | head -1)
+  [[ -n "$proj" ]] && pargs=(-p "$proj")
+  docker compose "${pargs[@]}" ps --format "table {{.Name}}\t{{.Status}}\t{{.Ports}}" "$@"
+}
 alias dockprune='docker images prune && docker volume prune'
 alias wdc='watch docker compose'
 
