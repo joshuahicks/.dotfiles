@@ -66,7 +66,9 @@ map("n", "<leader>d", [["_d]])
 map("v", "<leader>d", [["_d]])
 
 map("n", "Q", "<nop>")
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>f", function()
+	require("conform").format()
+end, { desc = "Format buffer" })
 
 -- reference list navigation
 map("n", "<C-n>", "<cmd>cnext<CR>zz")
@@ -74,14 +76,6 @@ map("n", "<C-b>", "<cmd>cprev<CR>zz")
 
 -- nvim rest
 map("n", "<leader>r", "<Plug>RestNvim")
-
--- python execution
-function ExecuteCurrentPythonFile()
-	local file_name = vim.fn.expand("%:p")
-	local command = "!python3 " .. file_name
-	vim.api.nvim_command(command)
-end
-map("n", "<leader>ef", ":lua ExecuteCurrentPythonFile()<CR>")
 
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",

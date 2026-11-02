@@ -83,6 +83,6 @@ return {
 		require("mason-lspconfig").setup({
 			ensure_installed = vim.tbl_keys(servers),
 		})
-		require("mason-tool-installer").setup({ ensure_installed = { "stylua" } })
+		require("mason-tool-installer").setup({ ensure_installed = { "stylua", "gofumpt", "golines" } })
 	end,
 }
