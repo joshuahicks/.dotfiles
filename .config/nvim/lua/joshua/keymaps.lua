@@ -16,15 +16,10 @@ function WinMove(key)
 		vim.cmd("wincmd " .. key)
 	end
 
-	-- Check if the current directory is a Git repository
-	local is_git_repo = vim.fn.system("git rev-parse --is-inside-work-tree >/dev/null 2>&1")
-	if is_git_repo == 0 then
-		-- Find the project root directory using git
-		local git_root = vim.fn.systemlist("git rev-parse --show-toplevel")
-		if #git_root > 0 then
-			-- Set the working directory to the project root
-			vim.cmd("lcd " .. git_root[1])
-		end
+	-- Set this window's working directory to the Git root when available.
+	local git_root = vim.fn.systemlist({ "git", "rev-parse", "--show-toplevel" })
+	if vim.v.shell_error == 0 and git_root[1] then
+		vim.cmd("lcd " .. vim.fn.fnameescape(git_root[1]))
 	end
 end
 
